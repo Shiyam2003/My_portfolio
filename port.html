@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <title>Your Name - portfolio</title>
+    <style>
+        body{
+            font-family: Arial,sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #91c0d6;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+
+        }
+        .header-conten h1{
+            font-size: 2.5rem;
+        }
+
+        .profile-picture {
+
+               width: 100px;
+               height: 100px;
+               border-radius: 75%;
+               object-fit: cover;
+               position: absolute;
+               top: 75px;
+               left: 75px;
+
+        }
+
+        nav{
+
+            background-color:#91c0d6;
+            color: #fff;
+            text-align: center;
+
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0%;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .section-content{
+            background-color: #fff;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(185, 227, 235, 0.1);
+        }
+        .download-button{
+            background-color:#91c0d6;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .download-button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color:#91c0d6;
+            color: #fff;
+        }
+
+        ul{
+            list-style-type: disc; 
+            padding-left: 20px;
+        }
+    </style>
+    </html>
+    <body>
+
+        <header>
+            <div class ="header-conten">
+                <img src="image.jpeg"alt="Your profile picture"class="profile-picture">
+                <h1>Shiyam Sundar</h1>
+                <p> passionation on student</p>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skils</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#strengths">Strengths</a></li>
+                <li><a href="#resume">Resume
+                </a></li>
+                
+            </ul>
+        </nav>
+        <section id="about">
+            <div class="section-content">
+                <h2>About Me</h2>
+                <p>Hello Everyone! This is Shiyam Sundar and i am B.Voc.,Software Development student</p>
+            </div>
+        </section>
+
+        <section id="education">
+            <div class="section-content">
+                <h2>Education</h2>
+                <ul><li>
+                    <h3>Degree</h3> 
+                    <p>B.Voc.,Software Development in Arumugam Pillai Seethai Ammal College at Thirupathur</p>
+                    </li>
+                <li><h3>HSE+2</h3> 
+                    <p>Passed from Sri Meenakshi Sundhareshwarar higher secondary school,Keelachivalppatti</p></li>
+                <li><h3>SSLC</h3>
+                    <p>Passed from MRP Matriculation School</p>
+                </li>  
+                </ul>
+                </div>
+        </section>
+
+        <section id="skills">
+            <div class="section-content">
+                <h2>Skills</h2>
+                <ul>
+                 <li>C and C++ Programming</li>
+                <li>Office Automation</li>
+                <li>Editing</li>
+                <li>Linux</li>
+                <li>Error Dedution</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="project">
+            <div class="section-content">
+                <h2>Project</h2>
+                <ul>
+                    <li>Website - <a href=" https://shiyam2003.github.io/zoo/" target="_blank">Show</a></li>
+                    
+                    
+                </ul>
+            </div>
+        </section>
+        <section id="strengths">
+            <div class="section-content">
+                <h2>Strengths</h2>
+                <li>Self Motivater</li>
+                <li>Self Confidence</li>
+                
+                <li>Positive Thinking</li>
+                </div>
+                </section>
+
+        <section id="resume">
+            <center>
+                <div class="section-content">
+                    <h2> Resume</h2>
+                    <a href="Resume_Shiyam.pdf" class="download-button" target="_blank">Download CV</a>
+                </div>
+            </center>
+        </section>
+
+        <footer>
+            <p>&copy; 2023 Shiyam Sundar</p>
+        </footer>
+
+        <script>
+            document.querySelectorAll('a[herf^="#"]').forEach(anchor =>{
+                anchor.addEventListener('clik',function(e){
+                    e.preventDefault();
+                    const targetID = this.getAttribute('herf').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if(targetElement){
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            }) ;
+            </script>
+    </body>
+</html>
